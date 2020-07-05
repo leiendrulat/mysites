@@ -25,9 +25,10 @@ func (r *Login) Marshal() ([]byte, error) {
 }
 
 type Login struct {
-	Name     string `json:"username"`
-	Email    string `json:"email"`
-	Password string `json:"password"`
+	First   string `json:"first"`
+	Last    string `json:"last"`
+	Email   string `json:"email"`
+	Subject string `json:"subject"`
 }
 
 func POST(w http.ResponseWriter, r *http.Request) {
@@ -91,13 +92,13 @@ func POST(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("ping ")
 		}
 		// query
-		stmt, err := db.Prepare("INSERT INTO users(name, email, password) VALUES(?, ?, ?)")
+		stmt, err := db.Prepare("INSERT INTO users(first, last, email, subject) VALUES(?, ?, ?)")
 		if err != nil {
 			log.Fatal(err)
 		}
-		userstemp := Login{Name: l.Name, Email: l.Name, Password: l.Name}
+		userstemp := Login{First: l.First, Last: l.Last, Email: l.Email, Subject: l.Subject}
 		fmt.Println(userstemp)
-		res, err := stmt.Exec(userstemp.Name, userstemp.Email, userstemp.Password)
+		res, err := stmt.Exec(userstemp.First, userstemp.Last, userstemp.Email, userstemp.Subject)
 		if err != nil {
 			log.Fatal(err)
 		}

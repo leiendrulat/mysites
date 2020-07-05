@@ -83,6 +83,15 @@ var image;
     cursor: pointer;
     border: 2px solid red;
   }
+
+@media only screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    
+  }
+}
+
+
 </style>
 
 <h1 align="center">
@@ -99,6 +108,8 @@ var image;
 </div>
 <hr />
 <br />
+
+
 <h2>Revit</h2>
 <div class="row">
   <div class="column">
