@@ -77,7 +77,7 @@ func POST(w http.ResponseWriter, r *http.Request) {
 
 		//database beginsssssss
 
-		db, err := sql.Open("mysql", "root:@/user")
+		db, err := sql.Open("mysql", "root:@/myapp_site")
 		if err != nil {
 			fmt.Println(err)
 		} else {
@@ -92,7 +92,7 @@ func POST(w http.ResponseWriter, r *http.Request) {
 			fmt.Println("ping ")
 		}
 		// query
-		stmt, err := db.Prepare("INSERT INTO users(first, last, email, subject) VALUES(?, ?, ?)")
+		stmt, err := db.Prepare("INSERT INTO user(first, last, email, subject) VALUES(?, ?, ?, ?)")
 		if err != nil {
 			log.Fatal(err)
 		}

@@ -1,66 +1,96 @@
-<script context="module">
-export const Elements = "sample";
-export const  ray = ["sample",2, 3];
-</script>
-<style>
-* {
-  box-sizing: border-box;
-}
-/* Style inputs */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-    border-radius: 5px;
-}
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
-    border-radius: 5px;
-}
+<script>
+  let first = "first";
+  let last = "last";
+  let email = "email";
+  let subject = "subject";
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  
+  async function doPost() {
+    const res = await fetch("http://localhost:8081/post", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        first,
+        last,
+        email,
+        subject
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+    const json = await res.json();
+    result = JSON.stringify(json);
   }
-}
+</script>
 
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  /* Style inputs */
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column,
+    input[type="submit"] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
 </style>
+{first, last, email, subject}
 <div class="container">
   <div style="text-align:center">
     <h2>Contact Us</h2>
@@ -68,19 +98,35 @@ input[type=submit]:hover {
   </div>
   <div class="row">
     <div class="column">
-      <img src="fb.jpg" style="width:100%" alt="none">
+      <img src="fb.jpg" style="width:100%" alt="none" />
     </div>
     <div class="column">
-      <form action="/action_page.php">
+      <form>
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input
+          type="text"
+          id="fname"
+          bind:value={first}
+          placeholder="Your name.." />
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input
+          type="text"
+          id="lname"
+          bind:value={last}
+          placeholder="Your last name.." />
         <label for="email">email</label>
-        <input type="text" id="email" name="email" placeholder="@email.com">
+        <input
+          type="text"
+          id="email"
+          bind:value={email}
+          placeholder="@email.com" />
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
+        <textarea
+          id="subject"
+          bind:value={subject}
+          placeholder="Write something.."
+          style="height:170px" />
+        <button type="button" on:click={doPost}>Post it.</button>
       </form>
     </div>
   </div>

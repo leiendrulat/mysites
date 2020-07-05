@@ -9,12 +9,11 @@ import (
 	"net/url"
 	"time"
 
-	//only 3rd parties
+	Form "github.com/leiendrulat/mysites/go/Handlers/Form"
 
+	//only 3rd parties
 	. "github.com/logrusorgru/aurora"
 	"github.com/rs/cors"
-
-	
 )
 
 type intercept404 struct {
@@ -62,6 +61,8 @@ func spaFileServeFunc(dir string) func(http.ResponseWriter, *http.Request) {
 func main() {
 	mux := http.NewServeMux() //used for cors
 	mux.HandleFunc("/", spaFileServeFunc("public"))
+	mux.HandleFunc("/post", Form.POST)
+
 	handler := cors.Default().Handler(mux)
 	c := context.Background()
 	log.Fatal(http.ListenAndServe(":8081", AddContext(c, handler)))
