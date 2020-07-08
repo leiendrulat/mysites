@@ -1,7 +1,17 @@
-<script>
-let src = './static/me.jpg'
-</script>
 
+
+
+<script>
+	let truth = false;
+	
+	function changes(){
+		if (truth == false){
+			truth = true;
+		}else{
+			truth = false;
+		}
+	}
+</script>
 
 <style>
 	h1, figure, p {
@@ -36,6 +46,8 @@ let src = './static/me.jpg'
 			font-size: 4em;
 		}
 	}
+
+
 </style>
 
 <svelte:head>
@@ -58,3 +70,15 @@ let src = './static/me.jpg'
 <p>To become part of the company in performing daily activities in order to provide, support and to expand my knowledge and skills in the field of multiple function. To obtain challenging opportunity, mostly for a positive contribution to the organization’s economic growth and productivity.</p>
 <br>
 <p>Self-motivated and hard working with the seal of progress and career advancement through determination and dedication.</p>
+<br>
+
+
+
+
+<button on:click={changes}><h2>Chat</h2></button>
+
+ {#if truth === true}
+<h3>Hi please send me an <a href="mailto:leiaarkitectz@gmail.com">email</h3>
+  {/if}
+
+

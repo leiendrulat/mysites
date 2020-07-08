@@ -1,4 +1,3 @@
-
 <script>
   let first = "first";
   let last = "last";
@@ -35,8 +34,7 @@
     box-sizing: border-box;
   }
   /* Style inputs */
-  input[type="text"],
-  select,
+
   textarea {
     width: 100%;
     padding: 12px;
@@ -47,18 +45,7 @@
     border-radius: 5px;
   }
 
-  input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
+ 
 
   /* Style the container/contact section */
   .container {
@@ -82,13 +69,7 @@
   }
 
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column,
-    input[type="submit"] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
+
 </style>
 {first, last, email, subject}
 <div class="container">

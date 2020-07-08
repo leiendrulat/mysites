@@ -1,6 +1,4 @@
-<script>
-import {Elements,ray} from './contact.svelte'
-</script>
+
 <svelte:head>
 	<title>About</title>
 </svelte:head>
@@ -21,16 +19,13 @@ import {Elements,ray} from './contact.svelte'
   font-size: 30px;
 }
 </style>
-<div class="grid-container">
-  <div class="item1">Web Development</div>
-  <div class="item2">Revit</div>
-  <div class="item3">Autocad</div>  
-  <div class="item4">Sketches</div>
-  </div>
-  <br>
+
+  
 <h1>About Me!</h1>
 
-<p>During this unprecedented time I managed to be positive inspite of these uncertainties. I learned new skills and softwares by creating a website. Learning basic Html, Css And Javascript is fun and enhanced you're creativeness. Managed to published and used Github to store and post my sample of works. And I incorporate most of my projects in my revit class.</p>
+
+
+<p>During this unprecedented time I managed to be positive inspite of these uncertainties. I learned new skills and softwares by creating a website. Learning basic Html, Css And Javascript is fun and enhanced you're creativeness. Managed to published and used Github to store and post my sample of works. And I incorporate most of my projects from my revit class.</p>
 
 <h2>Skills:</h2>
 <ul>
