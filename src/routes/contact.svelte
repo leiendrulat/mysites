@@ -45,8 +45,6 @@
     border-radius: 5px;
   }
 
- 
-
   /* Style the container/contact section */
   .container {
     border-radius: 5px;
@@ -69,9 +67,9 @@
   }
 
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-
 </style>
-{first, last, email, subject}
+
+
 <div class="container">
   <div style="text-align:center">
     <h2>Contact Us</h2>
@@ -83,25 +81,25 @@
     </div>
     <div class="column">
       <form>
-        <label for="fname">First Name</label>
+        <label for="fname">First Name:</label>
         <input
           type="text"
           id="fname"
           bind:value={first}
           placeholder="Your name.." />
-        <label for="lname">Last Name</label>
+        <label for="lname">Last Name:</label>
         <input
           type="text"
           id="lname"
           bind:value={last}
           placeholder="Your last name.." />
-        <label for="email">email</label>
+        <label for="email">Email:</label>
         <input
           type="text"
           id="email"
           bind:value={email}
           placeholder="@email.com" />
-        <label for="subject">Subject</label>
+        <label for="subject">Subject:</label>
         <textarea
           id="subject"
           bind:value={subject}

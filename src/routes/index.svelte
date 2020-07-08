@@ -75,10 +75,10 @@
 
 
 
-<button on:click={changes}><h2>Chat</h2></button>
+<button on:click={changes}><h3>Chat</h3></button>
 
  {#if truth === true}
-<h3>Hi please send me an <a href="mailto:leiaarkitectz@gmail.com">email</h3>
+<h5>Hi please send me an <a href="mailto:leiaarkitectz@gmail.com">email</h5>
   {/if}
 
 
