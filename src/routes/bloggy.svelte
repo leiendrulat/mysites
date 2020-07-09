@@ -29,6 +29,9 @@ import { group_outros } from "svelte/internal";
 </li>
 </ul>
 <br>
+<h3>Learning Computer Coding first:</h3>
+<p>Coding is the process of using a programming language to get a computer to behave how you want it to. Every line of code tells the computer to do something, and a document full of lines of code is called a script. Syntax codes is used to communicate and give instructions to the computers and other machines on what actions to perform. Further we used coding as a tool to create a website, mobile or web apps and other technologies we interact everyday.</p>
+<br>
 <h3>Glossary Words:</h3>
 <br>
 <ul>
