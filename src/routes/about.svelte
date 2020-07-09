@@ -23,10 +23,12 @@
   
 <h1>About Me!</h1>
 
+<p>An Architecture graduate, now I am into Website creation. </p>
 
+<p>During this unprecedented time I managed to be positive despite these uncertainties. I learned new skills and software by creating a website. Learning basic Html, Css And Javascript is fun and enhanced your creativeness. Managed to published and used Github to store and post my sample of works. And I incorporate most of my projects from my Revit class.</p>
 
-<p>During this unprecedented time I managed to be positive inspite of these uncertainties. I learned new skills and softwares by creating a website. Learning basic Html, Css And Javascript is fun and enhanced you're creativeness. Managed to published and used Github to store and post my sample of works. And I incorporate most of my projects from my revit class.</p>
-
+<p>Welcome to my site that features most of my works from my recent learning. Starting from Website Designing, Revit and Autocad mostly based on my job in UAE, curtainwall facade.</p>
+<br>
 <h2>Skills:</h2>
 <ul>
 
